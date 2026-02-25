@@ -1,0 +1,353 @@
+:root {
+  --green-900: #1b5e20;
+  --green-700: #2e7d32;
+  --green-500: #43a047;
+  --lime-300: #dce775;
+  --yellow-300: #fff176;
+  --cream: #f8fbef;
+  --ink: #243025;
+  --white: #ffffff;
+  --max: 1120px;
+  --radius: 18px;
+  --shadow: 0 10px 30px rgba(27, 94, 32, 0.14);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Zen Maru Gothic", "M PLUS Rounded 1c", "Hiragino Maru Gothic ProN", sans-serif;
+  color: var(--ink);
+  line-height: 1.75;
+  background:
+    radial-gradient(circle at 90% 6%, rgba(255, 241, 118, 0.45) 0, rgba(255, 241, 118, 0.45) 90px, transparent 91px),
+    radial-gradient(circle at 8% 30%, rgba(220, 231, 117, 0.28) 0, rgba(220, 231, 117, 0.28) 75px, transparent 76px),
+    var(--cream);
+}
+
+a {
+  color: var(--green-700);
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.9;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 14px;
+}
+
+.container {
+  width: min(100% - 1.4rem, var(--max));
+  margin-inline: auto;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(248, 251, 239, 0.94);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(67, 160, 71, 0.2);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 68px;
+}
+
+.brand {
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  color: var(--green-900);
+}
+
+.brand small {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: #54715b;
+}
+
+.menu-btn {
+  border: 0;
+  background: var(--green-700);
+  color: var(--white);
+  border-radius: 10px;
+  padding: 0.55rem 0.8rem;
+  font: inherit;
+}
+
+.gnav {
+  display: none;
+  padding-bottom: 0.8rem;
+}
+
+.gnav.open {
+  display: block;
+}
+
+.gnav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.gnav a {
+  display: block;
+  background: #f0f7db;
+  border-radius: 10px;
+  padding: 0.55rem 0.8rem;
+  font-weight: 700;
+}
+
+.hero {
+  padding: 2rem 0 1.8rem;
+}
+
+.hero-card {
+  background: linear-gradient(145deg, var(--green-700), var(--green-500));
+  color: var(--white);
+  border-radius: 24px;
+  padding: 1.3rem;
+  box-shadow: var(--shadow);
+}
+
+.hero h1,
+.page-hero h1 {
+  line-height: 1.35;
+  margin: 0 0 0.8rem;
+}
+
+.hero h1 {
+  font-size: clamp(1.5rem, 6vw, 2.4rem);
+}
+
+.hero p {
+  margin: 0;
+  font-size: 0.98rem;
+}
+
+.hero-actions {
+  display: grid;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  border-radius: 999px;
+  padding: 0.65rem 1rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+.btn-primary {
+  background: var(--yellow-300);
+  color: #22360f;
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.2);
+  color: var(--white);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.section {
+  padding: 1.5rem 0;
+}
+
+.section h2 {
+  font-size: clamp(1.3rem, 4vw, 1.9rem);
+  margin: 0 0 0.9rem;
+  color: var(--green-900);
+}
+
+.lead {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.card {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1rem;
+}
+
+.card h3 {
+  margin: 0 0 0.5rem;
+  color: var(--green-900);
+}
+
+.card p,
+.card li {
+  margin-top: 0;
+}
+
+.badge {
+  display: inline-block;
+  background: #eff7c8;
+  color: #31481f;
+  border-radius: 999px;
+  padding: 0.25rem 0.65rem;
+  font-weight: 800;
+  font-size: 0.78rem;
+}
+
+.photo {
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.photo img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.list {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.page-hero {
+  padding: 1.7rem 0 0.8rem;
+}
+
+.page-hero .wrap {
+  background: linear-gradient(140deg, #ebf6db, #f9fbe7);
+  border-radius: 20px;
+  padding: 1rem;
+}
+
+.info-item {
+  border-left: 4px solid var(--green-500);
+  padding-left: 0.8rem;
+}
+
+.record-item {
+  position: relative;
+  padding-left: 1.2rem;
+}
+
+.record-item::before {
+  content: "";
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--green-500);
+  position: absolute;
+  left: 0;
+  top: 0.55rem;
+}
+
+.album-grid {
+  display: grid;
+  gap: 0.9rem;
+  grid-template-columns: 1fr 1fr;
+}
+
+.album-grid figure {
+  margin: 0;
+  background: var(--white);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.album-grid figcaption {
+  font-size: 0.83rem;
+  padding: 0.5rem 0.65rem 0.65rem;
+}
+
+.contact-box {
+  background: linear-gradient(145deg, #f3fae1, #fffde7);
+  border-radius: 18px;
+  padding: 1rem;
+}
+
+.site-footer {
+  margin-top: 2rem;
+  background: var(--green-900);
+  color: #e7f5de;
+  padding: 1.5rem 0;
+}
+
+.site-footer a {
+  color: #fff8b0;
+}
+
+@media (min-width: 760px) {
+  .menu-btn {
+    display: none;
+  }
+
+  .gnav {
+    display: block;
+    padding-bottom: 0;
+  }
+
+  .gnav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .gnav a {
+    background: transparent;
+    padding: 0.45rem 0.7rem;
+  }
+
+  .hero-card {
+    padding: 2rem;
+  }
+
+  .hero-actions {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 420px;
+  }
+
+  .grid-2 {
+    grid-template-columns: 1.1fr 1fr;
+    align-items: start;
+  }
+
+  .grid-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .album-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    padding: 2.6rem 0 2.2rem;
+  }
+
+  .section {
+    padding: 2.2rem 0;
+  }
+}
